@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CLI Web App</title>
+    <style>
+        body { 
+            font-family: monospace; 
+            background-color: #d2bcbc;
+            font-weight: lighter;
+            color: #fff;
+            font-size: 13px;
+            margin: 0; 
+            padding: 20px;
+        }
+
+        input, textarea { 
+            background-color: #000; 
+            color: #fff;
+            border: none; 
+            width: 100%;
+            resize: none; 
+            outline: none; 
+        }
+        textarea { 
+            height: 450px; 
+            margin-bottom: 10px; 
+        }
+        input { 
+            height: 30px;
+            display: inline-flex;
+        }
+        button { 
+            display: none; 
+        }
+        span {
+            display: inline-flex;
+            color: #000;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form method="post" style="margin:auto;" class="">
+            {% csrf_token %}
+            <span style="background-color: #4d4a4a; color: white;">CLI Web App | Developed By Rezaul Karim</span>
+            <br>
+            <div style="display: inline-flex; background-color: #000; font-family: monospace; color: #fff; width: 100%;">
+                <span><span style="width: 200px; color: white;">{{currect_path}}></span><input type="text" name="input_text" autofocus value="{{input_text}}" style="display: inline-flex;"></span>
+            </div>
+            <textarea name="output_text" readonly>{{ output_text }}</textarea><br>
+            <button type="submit">Execute</button>
+        </form>
+    </div>
+</body>
+</html>
