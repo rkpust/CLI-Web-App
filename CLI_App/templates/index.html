@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{% csrf_token %}">
+        <meta name="csrf-token" content="">
+        {% csrf_token %}
         <title>CLI Web App</title>
         
         <style>
@@ -93,9 +94,7 @@
 
     <body>
         <div class="terminal">
-            <div>CLI Web Application [Version 1.1]
-                <br>(c) Rezaul Karim. All rights reserved.
-            </div>
+            <div>CLI Web Application [Version 1.1]<br>(c) Rezaul Karim. All rights reserved.</div>
             <div class="output">
 
             </div>
